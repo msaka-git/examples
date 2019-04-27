@@ -3,6 +3,47 @@ import sqlite3
 # self klass içindeki metodların (fonksiyonların
 # birbirleriyle haberleşmesini sağlar.
 # birbirlerine bu şekilde ulaışlar.)
+'''
+Mesela:
+
+class matematik(object):
+
+    def __init__(self):
+        self.pi=3.14
+        
+    def toplam(self,birinci,ikinci)
+        return birinci + ikinci
+        
+    def çarp(self,birinci, ikinci):
+        return birinci * ikinci
+        
+    def karesi(self,rakam)
+        return self.çarp(rakam,rakam)
+        
+    def pinin_karesi(self):
+        return self.karesi(self.pi)
+        
+mat=matematik()
+print(mat.karesi(5))
+
+işte burada karesi metodunun içine self ile
+çarp metodunu çağırdık ve rakam değişkenini kendisiyle
+çarptık. böylece tekrar çarpma fonkisyonu yazmamıza gerek 
+kalmadı. klass içinde metodlarda geçerlidir bu self
+
+
+__init__ ise ilk başta çağırılır. mesela program başladığında bir 
+veritabınına bağlanması gerekiyorsa bunu init ile yaparsın.
+yukarıdaki örnekte pi sayısı ilka başta çalışavağı için
+self ile hem pi sayısına, hem de karesi metoduna ulaşuyoruz.
+mat=matematik()
+print(mat.pinin_karesi()) içeriye değişken atamamıza gerek yok.
+
+def __init__(self):
+    bağlantı=mongdb.connect("veritbanı")
+'''
+
+
 from PyQt5 import QtWidgets
 
 class Pencere(QtWidgets.QWidget):
