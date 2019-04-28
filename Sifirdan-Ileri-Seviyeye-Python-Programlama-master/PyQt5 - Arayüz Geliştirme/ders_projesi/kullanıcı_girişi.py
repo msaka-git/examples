@@ -41,6 +41,39 @@ print(mat.pinin_karesi()) içeriye değişken atamamıza gerek yok.
 
 def __init__(self):
     bağlantı=mongdb.connect("veritbanı")
+
+sys.argv ile gönderdiğimiz argümanlar liste oalrak tutlur
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+import sys
+print sys.argv[1]
+Şimdi bu programı komut satırında şu şekilde çalıştırın. 
+
+python argv.py test
+test
+
+*args ile yıldız koyarsak sınırsız sayıda parametre koyabiliriz.
+tuple döner
+
+import sys
+
+def topla(*args):
+
+    print(args)
+
+
+topla("1","2","3")
+
+
+**kwargs koyarsak ise sınırsız sayıda sözlüke döner.
+import sys
+
+def topla(**kwargs):
+
+    print(kwargs)
+
+
+topla(mufit="1",osman="2")
 '''
 
 
